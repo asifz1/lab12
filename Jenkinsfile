@@ -1,20 +1,19 @@
-flag = true
 pipeline {
     agent any
+    enviroment{
+        NEW_VERSION = '1.3.0'
+    }
     stages {
         stage('Build') {
             steps {
                 echo 'Building...'
+             
                 // Define build commands here
+                echo " Building version $(NEW_VERSION)
             }
         }
         stage('Test') {
             steps {
-                    when {
-                        expression {
-                          flag == false
-                     }
-                    }
                 echo 'Testing...'
                 // Define test commands here
             }
