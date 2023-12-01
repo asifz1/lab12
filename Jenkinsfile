@@ -24,10 +24,10 @@ echo 'Deploying....'
 post {
   always { 
             echo ' Building condition running'
-
+  }
   failure {
             echo 'Post action if build failed'
 }
   }
 }
-}
+
