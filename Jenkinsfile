@@ -1,4 +1,4 @@
-flag = true
+ flag = true
 
 pipeline {
     agent any
@@ -9,7 +9,7 @@ pipeline {
     }
        
     environment {
-        NEW_VERSION = params.DEPLOY_VERSION ?: '1.3.0'
+        NEW_VERSION = "${params.DEPLOY_VERSION ?: '1.3.0'}"
     }
     stages {
         stage('Build') {
