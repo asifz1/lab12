@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    enviroment{
+    environment {
         NEW_VERSION = '1.3.0'
     }
     stages {
@@ -9,7 +9,7 @@ pipeline {
                 echo 'Building...'
              
                 // Define build commands here
-                echo " Building version $(NEW_VERSION)
+                echo "Building version ${NEW_VERSION}"
             }
         }
         stage('Test') {
@@ -34,5 +34,6 @@ pipeline {
         }
     }
 }
+
 
 
